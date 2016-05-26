@@ -1,6 +1,6 @@
 {
   "name": "generator-create",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "",
   "keywords": ["yeoman-generator"],
   "dependencies": {
@@ -13,5 +13,5 @@
   },
   "main": "app/index.js",
   "license": "ISC",
-  "homepage":"https://github.com/zhangxiangzhong/generator-create.git"
+  "homepage":"https://github.com/ReactEngine/generator-create.git"
 }
