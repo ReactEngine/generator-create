@@ -45,7 +45,7 @@ module.exports = generators.Base.extend({
              },
              type : 'input',
              name : 'create_name',
-             message:'please type what\'s the name of project ? '
+             message:'please input what\'s the name of project ? '
          },
         {
             when: function (props) {
@@ -53,7 +53,7 @@ module.exports = generators.Base.extend({
             },
            type : 'input',
            name : 'create_name',
-           message:'please type what\'s the name of model  ? '
+           message:'please input what\'s the name of model  ? '
         },
         {
             when: function (props) {
@@ -61,7 +61,7 @@ module.exports = generators.Base.extend({
             },
             type : 'input',
             name : 'create_name',
-            message:'please type what\'s the name of module ? '
+            message:'please input what\'s the name of module ? '
          }
          ];
 
@@ -69,7 +69,7 @@ module.exports = generators.Base.extend({
             this.answers = answers;
             var self = this;
             if(!this.answers.create_name){
-                console.log("error ! please type name of " + this.answers.create_kind );
+                self.log("error ! please input name of " + this.answers.create_kind );
                 return;
             }
             var create_type_command = "";
@@ -79,13 +79,13 @@ module.exports = generators.Base.extend({
             var yoCommand = "yo reactengine:" + this.answers.create_kind + " " + create_type_command +" " + this.answers.create_name;
             exec(yoCommand, { maxBuffer: 10000 * 1024 }, function(err,stdOut,stdErr) {
                 if (err) {
-                    console.error(err);
+                    self.error(err);
                 }
                 else{
                     if(stdOut && stdOut.length){
-                        console.log(stdOut);
+                        self.log(stdOut);
                     }else{
-                        console.log("finished create " + self.answers.create_kind +" .");
+                        self.log("finished create " + self.answers.create_kind +" .");
                     }
                 }
             });
