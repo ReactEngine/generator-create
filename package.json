@@ -1,0 +1,17 @@
+{
+  "name": "generator-create",
+  "version": "0.1.4",
+  "description": "",
+  "keywords": ["yeoman-generator"],
+  "dependencies": {
+    "yeoman-generator": "^0.20.2",
+    "chalk": "^1.1.1",
+    "gulp-git": "^1.6.0",
+    "mkdirp": "^0.5.1",
+    "string": "^3.3.1",
+    "yosay": "^1.0.5"
+  },
+  "main": "app/index.js",
+  "license": "ISC",
+  "homepage":"https://github.com/zhangxiangzhong/generator-create.git"
+}
