@@ -21,7 +21,7 @@ module.exports = generators.Base.extend({
             name: 'create_kind', //创建的种类
             message: 'please select create type . ',
             choices: [
-                "project", //创建project
+                //"project", //创建project 暂时注销
                 "model",
                 "module"
             ],
